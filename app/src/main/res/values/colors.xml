@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="junk_black">#090909</color>
+    <color name="junk_surface">#141414</color>
+    <color name="junk_surface_raised">#1D1D1D</color>
+    <color name="junk_orange">#FF641F</color>
+    <color name="junk_orange_light">#FF9B57</color>
+    <color name="junk_salvage">#52705D</color>
+    <color name="junk_cream">#F3EDE4</color>
+    <color name="junk_muted">#AAA69F</color>
+    <color name="junk_line">#484848</color>
+</resources>

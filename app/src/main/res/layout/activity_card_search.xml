@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/junk_black"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/widget_button_secondary"
+            android:text="MAGIC: THE GATHERING"
+            android:textColor="@color/junk_orange_light"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Locate cardboard."
+            android:textColor="@color/junk_cream"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Type a card name. Then choose which identical-but-not-identical one you meant."
+            android:textColor="@color/junk_muted"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/card_search"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/activity_input"
+                android:completionThreshold="2"
+                android:hint="@string/search_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:textColor="@color/junk_cream"
+                android:textColorHint="@color/junk_muted"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:background="@drawable/widget_button"
+                android:backgroundTint="@null"
+                android:minWidth="88dp"
+                android:text="@string/search"
+                android:textAllCaps="false"
+                android:textColor="@color/junk_black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:indeterminateTint="@color/junk_orange"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:minHeight="24dp"
+            android:textColor="@color/junk_muted"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/printing_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/widget_button_secondary"
+            android:text="@string/printing"
+            android:textColor="@color/junk_cream"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/printing_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/activity_input"
+            android:popupBackground="@color/junk_surface_raised"
+            android:spinnerMode="dropdown"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/card_preview"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/widget_panel"
+            android:contentDescription="@string/widget_description"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/card_placeholder"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/price_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:gravity="center"
+            android:textColor="@color/junk_orange_light"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/widget_button"
+            android:backgroundTint="@null"
+            android:enabled="false"
+            android:text="@string/pin_cardboard"
+            android:textAllCaps="false"
+            android:textColor="@color/junk_black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/open_site_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/widget_button_secondary"
+            android:backgroundTint="@null"
+            android:text="@string/open_site"
+            android:textAllCaps="false"
+            android:textColor="@color/junk_cream" />
+
+        <TextView
+            android:id="@+id/app_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Add the widget from your home screen, then select a card here. One must respect Android’s rituals."
+            android:textColor="#77736D"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</ScrollView>

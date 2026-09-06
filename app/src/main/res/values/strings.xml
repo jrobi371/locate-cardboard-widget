@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Locate Cardboard</string>
+    <string name="widget_description">A selected Magic card, its printing, and current USD market estimate.</string>
+    <string name="widget_header">LOCATE CARDBOARD</string>
+    <string name="widget_empty">Tap Change to assign some cardboard.</string>
+    <string name="widget_loading">Retrieving cardboard…</string>
+    <string name="refresh">Refresh</string>
+    <string name="change">Change</string>
+    <string name="open_site">Open full card viewer</string>
+    <string name="search_hint">Type a card name</string>
+    <string name="search">Fetch.</string>
+    <string name="printing">Printing</string>
+    <string name="pin_cardboard">Pin cardboard</string>
+</resources>

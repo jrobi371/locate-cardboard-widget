@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <pattern id="scratches" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M8 58 L33 53 M48 14 L65 11 M17 29 L26 25" stroke="#ffffff" stroke-width="1" opacity="0.045" />
+    </pattern>
+    <pattern id="barcode" width="32" height="18" patternUnits="userSpaceOnUse">
+      <path d="M1 0V18 M4 0V18 M8 0V18 M10 0V18 M15 0V18 M20 0V18 M23 0V18 M29 0V18" stroke="#8c8881" stroke-width="2" />
+    </pattern>
+  </defs>
+
+  <rect width="1400" height="900" fill="#080808" />
+  <rect width="1400" height="900" fill="url(#scratches)" />
+  <path d="M0 112 H1400" stroke="#ff641f" stroke-width="3" />
+  <path d="M0 120 H1400" stroke="#52705d" stroke-width="1" opacity="0.8" />
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="70" y="66" fill="#ff641f" font-size="20" font-weight="800" letter-spacing="4">PERSONAL ANDROID WIDGET / JNK-01</text>
+    <text x="70" y="100" fill="#f3ede4" font-size="28" font-weight="900">Locate cardboard without locating the app first.</text>
+
+    <g transform="translate(72 156)">
+      <rect width="470" height="682" rx="42" fill="#121212" stroke="#3e3e3e" stroke-width="4" />
+      <rect x="18" y="18" width="434" height="646" rx="28" fill="#0b0b0b" />
+      <circle cx="235" cy="39" r="6" fill="#363636" />
+
+      <text x="42" y="79" fill="#85817a" font-size="14" font-weight="700" letter-spacing="2">FRI  •  1:17 AM</text>
+      <circle cx="411" cy="73" r="7" fill="#52705d" />
+      <path d="M386 80 q12-18 24 0" fill="none" stroke="#8f8b85" stroke-width="3" />
+
+      <g transform="translate(78 104)">
+        <rect width="314" height="500" rx="12" fill="#090909" stroke="#ff641f" stroke-width="4" />
+        <rect x="10" y="10" width="294" height="480" rx="7" fill="none" stroke="#353535" stroke-width="2" stroke-dasharray="9 7" />
+
+        <text x="20" y="39" fill="#ff641f" font-size="13" font-weight="900" letter-spacing="2">LOCATE CARDBOARD</text>
+        <rect x="244" y="22" width="42" height="18" rx="3" fill="#1c1c1c" stroke="#52705d" />
+        <text x="251" y="35" fill="#aaa69f" font-size="9" font-weight="700">JNK-01</text>
+
+        <rect x="24" y="56" width="266" height="302" rx="7" fill="#131313" stroke="#454545" stroke-width="2" />
+        <g transform="translate(77 69) rotate(-1 80 135)">
+          <rect width="160" height="274" rx="10" fill="#171717" stroke="#ff641f" stroke-width="3" />
+          <rect x="10" y="12" width="140" height="130" rx="4" fill="#1d2420" stroke="#52705d" />
+          <circle cx="80" cy="77" r="40" fill="none" stroke="#ff641f" stroke-width="3" opacity="0.62" />
+          <path d="M48 98 L80 46 L112 98 Z" fill="none" stroke="#8f8b85" stroke-width="3" />
+          <rect x="10" y="152" width="140" height="15" fill="#ff641f" opacity="0.72" />
+          <rect x="10" y="178" width="112" height="8" fill="#55514c" />
+          <rect x="10" y="194" width="136" height="8" fill="#55514c" />
+          <rect x="10" y="210" width="126" height="8" fill="#55514c" />
+          <rect x="10" y="232" width="70" height="24" fill="url(#barcode)" opacity="0.7" />
+        </g>
+
+        <text x="24" y="387" fill="#f3ede4" font-size="18" font-weight="900">Alela, Artful Provocateur</text>
+        <text x="24" y="409" fill="#aaa69f" font-size="12">Throne of Eldraine · ELD #324</text>
+        <text x="24" y="438" fill="#ff9b57" font-size="16" font-weight="900">TCGplayer · Normal $—</text>
+        <text x="24" y="456" fill="#85817a" font-size="10">DAILY MARKET ESTIMATE VIA SCRYFALL</text>
+
+        <rect x="24" y="468" width="122" height="34" rx="5" fill="#1d1d1d" stroke="#52705d" />
+        <text x="61" y="490" fill="#f3ede4" font-size="12" font-weight="800">REFRESH</text>
+        <rect x="158" y="468" width="132" height="34" rx="5" fill="#ff641f" stroke="#ffad79" />
+        <text x="199" y="490" fill="#090909" font-size="12" font-weight="900">CHANGE</text>
+      </g>
+    </g>
+
+    <g transform="translate(630 156)">
+      <rect width="698" height="682" rx="18" fill="#0d0d0d" stroke="#454545" stroke-width="3" />
+      <path d="M0 0 H698 V14 H0 Z" fill="#ff641f" />
+      <rect x="38" y="39" width="216" height="28" rx="4" fill="#1d1d1d" stroke="#52705d" />
+      <text x="51" y="58" fill="#ff9b57" font-size="12" font-weight="900" letter-spacing="2">MAGIC: THE GATHERING</text>
+      <text x="38" y="119" fill="#f3ede4" font-size="42" font-weight="900">Locate cardboard.</text>
+      <text x="38" y="151" fill="#aaa69f" font-size="16">Type a card name. Then choose which identical-but-not-identical</text>
+      <text x="38" y="174" fill="#aaa69f" font-size="16">one you meant.</text>
+
+      <rect x="38" y="207" width="466" height="54" rx="7" fill="#141414" stroke="#4b4b4b" stroke-width="2" />
+      <text x="55" y="241" fill="#f3ede4" font-size="17">Alela, Artful Provocateur</text>
+      <rect x="516" y="207" width="143" height="54" rx="7" fill="#ff641f" stroke="#ffad79" stroke-width="2" />
+      <text x="562" y="241" fill="#090909" font-size="17" font-weight="900">Fetch.</text>
+
+      <rect x="38" y="282" width="96" height="27" rx="3" fill="#1d1d1d" stroke="#52705d" />
+      <text x="54" y="301" fill="#f3ede4" font-size="12" font-weight="900" letter-spacing="1">PRINTING</text>
+      <rect x="38" y="321" width="621" height="58" rx="7" fill="#141414" stroke="#4b4b4b" stroke-width="2" />
+      <text x="55" y="356" fill="#f3ede4" font-size="16">Throne of Eldraine (ELD) #324 · 2019</text>
+      <path d="M628 345 l10 10 10-10" fill="none" stroke="#ff641f" stroke-width="3" />
+
+      <rect x="38" y="405" width="268" height="190" rx="8" fill="#141414" stroke="#454545" stroke-width="2" />
+      <rect x="114" y="418" width="116" height="164" rx="7" fill="#171717" stroke="#ff641f" stroke-width="2" />
+      <path d="M128 433 L216 567 M216 433 L128 567" stroke="#52705d" stroke-width="3" opacity="0.7" />
+      <rect x="326" y="405" width="333" height="86" rx="8" fill="#141414" stroke="#454545" stroke-width="2" />
+      <text x="346" y="435" fill="#85817a" font-size="11" font-weight="900" letter-spacing="1">TCGPLAYER MARKET PRICE</text>
+      <text x="346" y="470" fill="#ff9b57" font-size="24" font-weight="900">Normal $—</text>
+
+      <rect x="326" y="509" width="333" height="86" rx="7" fill="#ff641f" stroke="#ffad79" stroke-width="2" />
+      <text x="424" y="562" fill="#090909" font-size="20" font-weight="900">PIN CARDBOARD</text>
+
+      <text x="38" y="637" fill="#74716c" font-size="12">THE WIDGET STORES ONE SCALED IMAGE. THE REST REMAINS THE INTERNET'S PROBLEM.</text>
+      <rect x="588" y="625" width="72" height="18" fill="url(#barcode)" opacity="0.52" />
+    </g>
+  </g>
+</svg>
