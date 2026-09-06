@@ -17,6 +17,8 @@ final class CardPrinting {
     final String releasedAt;
     final String scryfallUri;
     final String imageUrl;
+    final String oracleText;
+    final String rulingsUri;
     final String usd;
     final String usdFoil;
     final String usdEtched;
@@ -30,6 +32,8 @@ final class CardPrinting {
             String releasedAt,
             String scryfallUri,
             String imageUrl,
+            String oracleText,
+            String rulingsUri,
             String usd,
             String usdFoil,
             String usdEtched
@@ -42,6 +46,8 @@ final class CardPrinting {
         this.releasedAt = releasedAt;
         this.scryfallUri = scryfallUri;
         this.imageUrl = imageUrl;
+        this.oracleText = oracleText;
+        this.rulingsUri = rulingsUri;
         this.usd = usd;
         this.usdFoil = usdFoil;
         this.usdEtched = usdEtched;
@@ -58,10 +64,33 @@ final class CardPrinting {
                 card.optString("released_at", ""),
                 card.optString("scryfall_uri", ApiClient.SITE_ROOT),
                 findImageUrl(card),
+                findOracleText(card),
+                card.optString("rulings_uri", ""),
                 nullablePrice(prices, "usd"),
                 nullablePrice(prices, "usd_foil"),
                 nullablePrice(prices, "usd_etched")
         );
+    }
+
+    private static String findOracleText(JSONObject card) {
+        String oracleText = card.optString("oracle_text", "");
+        if (!oracleText.isEmpty()) return oracleText;
+
+        JSONArray faces = card.optJSONArray("card_faces");
+        if (faces == null) return "";
+
+        StringBuilder combined = new StringBuilder();
+        for (int index = 0; index < faces.length(); index++) {
+            JSONObject face = faces.optJSONObject(index);
+            if (face == null) continue;
+            String faceText = face.optString("oracle_text", "");
+            if (faceText.isEmpty()) continue;
+            if (combined.length() > 0) combined.append("\n\n");
+            String faceName = face.optString("name", "");
+            if (!faceName.isEmpty()) combined.append(faceName).append("\n");
+            combined.append(faceText);
+        }
+        return combined.toString();
     }
 
     private static String nullablePrice(JSONObject prices, String key) {

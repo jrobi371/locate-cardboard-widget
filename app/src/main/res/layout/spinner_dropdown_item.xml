@@ -3,7 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/junk_surface_raised"
-    android:minHeight="52dp"
+    android:gravity="center_vertical"
+    android:lineSpacingExtra="2dp"
+    android:maxLines="3"
+    android:minHeight="64dp"
     android:padding="13dp"
     android:textColor="@color/junk_cream"
-    android:textSize="15sp" />
+    android:textSize="14sp" />

@@ -11,5 +11,8 @@
     <string name="search_hint">Type a card name</string>
     <string name="search">Fetch.</string>
     <string name="printing">Printing</string>
+    <string name="choose_printing">Choose a printing</string>
+    <string name="card_rules">CARD RULES</string>
+    <string name="rulings_heading">Ummm, actually....</string>
     <string name="pin_cardboard">Pin cardboard</string>
 </resources>

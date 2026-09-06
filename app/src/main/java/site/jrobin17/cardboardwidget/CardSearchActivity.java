@@ -44,6 +44,10 @@ public final class CardSearchActivity extends Activity {
     private Spinner printingSpinner;
     private ImageView cardPreview;
     private TextView pricePreview;
+    private TextView rulesLabel;
+    private TextView oracleText;
+    private TextView rulingsLabel;
+    private TextView rulingsText;
     private ArrayAdapter<String> suggestionAdapter;
     private ArrayAdapter<CardPrinting> printingAdapter;
     private List<CardPrinting> printings = new ArrayList<>();
@@ -88,6 +92,10 @@ public final class CardSearchActivity extends Activity {
         printingSpinner = findViewById(R.id.printing_spinner);
         cardPreview = findViewById(R.id.card_preview);
         pricePreview = findViewById(R.id.price_preview);
+        rulesLabel = findViewById(R.id.rules_label);
+        oracleText = findViewById(R.id.oracle_text);
+        rulingsLabel = findViewById(R.id.rulings_label);
+        rulingsText = findViewById(R.id.rulings_text);
 
         suggestionAdapter = new ArrayAdapter<>(
                 this,
@@ -236,6 +244,14 @@ public final class CardSearchActivity extends Activity {
         pricePreview.setVisibility(View.VISIBLE);
         cardPreview.setImageResource(R.drawable.card_placeholder);
         cardPreview.setVisibility(View.VISIBLE);
+        rulesLabel.setVisibility(View.VISIBLE);
+        oracleText.setText(card.oracleText.isEmpty()
+                ? "This card has no Oracle rules text."
+                : card.oracleText);
+        oracleText.setVisibility(View.VISIBLE);
+        rulingsLabel.setVisibility(View.VISIBLE);
+        rulingsText.setText("Checking official rulings…");
+        rulingsText.setVisibility(View.VISIBLE);
 
         executor.execute(() -> {
             try {
@@ -245,6 +261,31 @@ public final class CardSearchActivity extends Activity {
                 });
             } catch (Exception ignored) {
                 // The selected printing and price remain usable without a preview image.
+            }
+        });
+
+        executor.execute(() -> {
+            try {
+                List<String> rulings = ApiClient.fetchRulings(card.rulingsUri);
+                mainHandler.post(() -> {
+                    if (request != previewRequestNumber.get()) return;
+                    if (rulings.isEmpty()) {
+                        rulingsText.setText("No official rulings are listed for this card.");
+                        return;
+                    }
+                    StringBuilder listed = new StringBuilder();
+                    for (String ruling : rulings) {
+                        if (listed.length() > 0) listed.append("\n\n");
+                        listed.append("• ").append(ruling);
+                    }
+                    rulingsText.setText(listed.toString());
+                });
+            } catch (Exception ignored) {
+                mainHandler.post(() -> {
+                    if (request == previewRequestNumber.get()) {
+                        rulingsText.setText("Official rulings are temporarily unavailable.");
+                    }
+                });
             }
         });
     }

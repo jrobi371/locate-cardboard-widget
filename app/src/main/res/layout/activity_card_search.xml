@@ -108,11 +108,12 @@
         <Spinner
             android:id="@+id/printing_spinner"
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/activity_input"
-            android:popupBackground="@color/junk_surface_raised"
-            android:spinnerMode="dropdown"
+            android:minHeight="76dp"
+            android:prompt="@string/choose_printing"
+            android:spinnerMode="dialog"
             android:visibility="gone" />
 
         <ImageView
@@ -136,6 +137,56 @@
             android:textColor="@color/junk_orange_light"
             android:textSize="17sp"
             android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/rules_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/widget_button_secondary"
+            android:text="@string/card_rules"
+            android:textColor="@color/junk_orange_light"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/oracle_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/widget_panel"
+            android:lineSpacingExtra="3dp"
+            android:padding="14dp"
+            android:textColor="@color/junk_cream"
+            android:textIsSelectable="true"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/rulings_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/widget_button_secondary"
+            android:text="@string/rulings_heading"
+            android:textColor="@color/junk_orange_light"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/rulings_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/widget_panel"
+            android:lineSpacingExtra="3dp"
+            android:padding="14dp"
+            android:textColor="@color/junk_cream"
+            android:textIsSelectable="true"
+            android:textSize="14sp"
             android:visibility="gone" />
 
         <Button

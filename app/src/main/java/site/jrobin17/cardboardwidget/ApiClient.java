@@ -92,6 +92,22 @@ final class ApiClient {
         );
     }
 
+    static List<String> fetchRulings(String rulingsUrl) throws IOException, JSONException {
+        List<String> rulings = new ArrayList<>();
+        if (rulingsUrl == null || rulingsUrl.isEmpty()) return rulings;
+
+        JSONObject payload = requestJson(proxyApiUrl(rulingsUrl));
+        JSONArray data = payload.optJSONArray("data");
+        if (data == null) return rulings;
+        for (int index = 0; index < data.length(); index++) {
+            JSONObject ruling = data.optJSONObject(index);
+            if (ruling == null) continue;
+            String comment = ruling.optString("comment", "");
+            if (!comment.isEmpty()) rulings.add(comment);
+        }
+        return rulings;
+    }
+
     static Bitmap fetchCardImage(String sourceUrl) throws IOException {
         if (sourceUrl == null || sourceUrl.isEmpty()) {
             throw new IOException("No card image is available for this printing.");
